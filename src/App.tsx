@@ -13,8 +13,8 @@ function App() {
       <header className="fixed top-0 w-full z-50 bg-[#1a3b40]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(245,241,228,0.05)]">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 h-20">
           <div className="flex items-center gap-3">
-            <img src="/octoflow_icon.png" alt="Octoflow" className="h-16 w-16 object-contain" />
-            <span className="text-2xl font-bold text-[#e0d6b6]">Octoflow</span>
+            <img src="/octosync_icon.png" alt="Octosync" className="h-16 w-16 object-contain" />
+            <span className="text-2xl font-bold text-[#e0d6b6]">Octosync</span>
           </div>
           <div className="flex items-center">
             <button
@@ -88,7 +88,7 @@ function App() {
         <section className="py-24 px-6 bg-[#1a3b40]" id="founders">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4 text-[#e0d6b6]">The Minds Behind Octoflow</h2>
+              <h2 className="text-4xl font-bold mb-4 text-[#e0d6b6]">The Minds Behind Octosync</h2>
               <p className="text-[#e0d6b6]/60 max-w-2xl mx-auto">Engineering precision met with strategic vision. Our founders bring decades of experience from the forefront of the AI revolution.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -184,8 +184,8 @@ function App() {
       <footer className="bg-[#122a2e] w-full py-12 border-t border-[#e0d6b6]/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-8 gap-6">
           <div className="flex items-center gap-2">
-            <img src="/octoflow_icon.png" alt="Octoflow" className="h-8 w-8 object-contain" />
-            <span className="italic text-[#f28c5a] text-xl font-bold">Octoflow</span>
+            <img src="/octosync_icon.png" alt="Octosync" className="h-8 w-8 object-contain" />
+            <span className="italic text-[#f28c5a] text-xl font-bold">Octosync</span>
           </div>
           <div className="flex gap-8">
             <a className="text-[#e0d6b6]/60 hover:text-[#f28c5a] transition-colors text-sm tracking-wide" href="#services">Services</a>
@@ -194,7 +194,7 @@ function App() {
             <a className="text-[#e0d6b6]/60 hover:text-[#f28c5a] transition-colors text-sm tracking-wide" href="#">Legal</a>
           </div>
           <p className="text-sm tracking-wide text-[#e0d6b6]/60 text-center md:text-right">
-            © 2024 Octoflow. Precision Engineering for the Modern Scholar.
+            © 2024 Octosync. Precision Engineering for the Modern Scholar.
           </p>
         </div>
       </footer>
