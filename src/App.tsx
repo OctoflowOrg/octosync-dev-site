@@ -1,5 +1,4 @@
 import './App.css'
-import OctoLogo from './components/OctoLogo'
 
 function App() {
   const scrollToContact = (e: React.MouseEvent) => {
