@@ -126,13 +126,13 @@ function App() {
               <div className="flex flex-col items-center text-center">
                 <div className="relative mb-8 w-64 h-80 rounded-2xl overflow-hidden">
                   <img
-                    alt="Alice Chen"
+                    alt="Sean Pichardo"
                     className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuClC0GfMPxTiw1xPNHKgXMIx4Y8NMwmlmrohjLbbg9tsziEonenUdplpaz4rHEF4p5E6VhsDh94zo52rqrvOUGzJcaYFii9b-mM300thIlW-Ecr3aqkdeeLhs2AqExvdeWvgjoXr23uvYI0omsLTO1UMJ-Ug_aH586Y_5KmD7jY_uoHiH0ymldGt7fQq8cDO0wrqEIu9bUIj2vvmuZ19_22u3tlaXNn-Uw0EEM46PktWMTyfMOoX0EkTUYkpJR2tsnxGhuzRjNjcysf"
+                    src="/sean_pichardo_headshot_2026_clean.png"
                   />
                   <div className="absolute inset-0 border-2 border-[#f28c5a]/20 rounded-2xl pointer-events-none"></div>
                 </div>
-                <h3 className="text-2xl font-bold mb-1 text-[#e0d6b6]">Alice Chen</h3>
+                <h3 className="text-2xl font-bold mb-1 text-[#e0d6b6]">Sean Pichardo</h3>
                 <p className="text-[#f28c5a] text-sm uppercase tracking-widest mb-4">Co-Founder &amp; Chief Architect</p>
                 <p className="text-[#e0d6b6]/70 leading-relaxed max-w-xs">Former OpenAI lead specializing in high-throughput data architectures and generative systems.</p>
               </div>
@@ -140,13 +140,13 @@ function App() {
               <div className="flex flex-col items-center text-center">
                 <div className="relative mb-8 w-64 h-80 rounded-2xl overflow-hidden">
                   <img
-                    alt="David Torres"
+                    alt="LeSean Johnson"
                     className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHkhqakkn_52KmVdVLYLMWu-yo4xKFZ_6TFS2wu8C4sL2aaUCqM2KN3U1OfNjV34r3UZoPUxVJoSIi-XpyccdNJZA5eh0OBLYcVy7o_BIYy5tXdQVuWdRGPHfvvSsIPQLPqftc4Ru-X8Q-vNYa6n765u5z2HIOfvhVqMSdL2XbXVArcfL0rsHQOklv1H_EDJuUQZGh3QL0EXL4qK2vgFoDdKvK4JlnHObFmMiF7Xz5-nlQ0tWhePB6-SlmbEV41U8ZK_994c8v1Njd"
+                    src="/lesean_johnson_headshot_2026_clean.png"
                   />
                   <div className="absolute inset-0 border-2 border-[#f28c5a]/20 rounded-2xl pointer-events-none"></div>
                 </div>
-                <h3 className="text-2xl font-bold mb-1 text-[#e0d6b6]">David Torres</h3>
+                <h3 className="text-2xl font-bold mb-1 text-[#e0d6b6]">LeSean Johnson</h3>
                 <p className="text-[#f28c5a] text-sm uppercase tracking-widest mb-4">Co-Founder &amp; Strategy Lead</p>
                 <p className="text-[#e0d6b6]/70 leading-relaxed max-w-xs">Ex-Microsoft engineering director with a focus on enterprise-scale automation and supply chain logic.</p>
               </div>
