@@ -1,15 +1,19 @@
-export default function OctoLogo({ className = '' }: { className?: string }) {
-  // Body: circle cx=105, cy=66, r=52
-  // Tentacle roots placed on the lower arc of the body circle.
-  // Key insight from reference: arms go in ALL directions — some sideways, one curves UP-right.
-
+export default function OctoLogo({
+  className = '',
+  color = '#f28c5a',
+  eyeColor = '#1a3b40',
+}: {
+  className?: string
+  color?: string
+  eyeColor?: string
+}) {
   const arm = {
-    stroke: '#f28c5a',
+    stroke: color,
     strokeWidth: 8,
     strokeLinecap: 'round' as const,
     fill: 'none',
   }
-  const node = { stroke: '#f28c5a', strokeWidth: 4, fill: 'none' }
+  const node = { stroke: color, strokeWidth: 4, fill: 'none' }
 
   return (
     <svg
@@ -19,10 +23,10 @@ export default function OctoLogo({ className = '' }: { className?: string }) {
       xmlns="http://www.w3.org/2000/svg"
     >
       {/* ── Body: full circle for the classic octopus dome ── */}
-      <circle cx="105" cy="66" r="52" fill="#f28c5a" />
+      <circle cx="105" cy="66" r="52" fill={color} />
 
       {/* Eye — slightly left of center, matching reference */}
-      <circle cx="101" cy="60" r="7.5" fill="#1a3b40" />
+      <circle cx="101" cy="60" r="7.5" fill={eyeColor} />
 
       {/* ── Arms ──
           Cubic bezier: M start C cp1 cp2 end

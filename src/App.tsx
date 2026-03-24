@@ -9,11 +9,41 @@ function App() {
 
   return (
     <>
+      {/* SVG filters: exact-cream → #e0d6b6, exact-orange → #f28c5a, exact-teal → #1a3b40 */}
+      <svg width="0" height="0" style={{ position: 'absolute' }}>
+        <defs>
+          <filter id="exact-cream" colorInterpolationFilters="sRGB">
+            <feColorMatrix type="matrix" values="
+              0 0 0 0 0.878
+              0 0 0 0 0.839
+              0 0 0 0 0.714
+              0 0 0 1 0" />
+          </filter>
+          <filter id="exact-orange" colorInterpolationFilters="sRGB">
+            <feColorMatrix type="matrix" values="
+              0 0 0 0 0.949
+              0 0 0 0 0.549
+              0 0 0 0 0.353
+              0 0 0 1 0" />
+          </filter>
+          <filter id="exact-teal" colorInterpolationFilters="sRGB">
+            <feColorMatrix type="matrix" values="
+              0 0 0 0 0.102
+              0 0 0 0 0.231
+              0 0 0 0 0.251
+              0 0 0 1 0" />
+          </filter>
+        </defs>
+      </svg>
+
       {/* TopAppBar */}
       <header className="fixed top-0 w-full z-50 bg-[#1a3b40]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(245,241,228,0.05)]">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-6 h-20">
           <div className="flex items-center gap-3">
-            <img src="/octosync_icon.png" alt="Octosync" className="h-16 w-16 object-contain" />
+            <div className="relative h-20 w-20 flex-shrink-0">
+              <img src="/octo_circuit.png" alt="" className="absolute inset-0 h-full w-full object-contain" style={{ filter: 'url(#exact-orange)' }} />
+              <img src="/octo_body.png" alt="Octosync" className="absolute inset-0 h-full w-full object-contain" style={{ filter: 'url(#exact-cream)' }} />
+            </div>
             <span className="text-2xl font-bold text-[#e0d6b6]">Octosync</span>
           </div>
           <div className="flex items-center">
@@ -181,20 +211,22 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#122a2e] w-full py-12 border-t border-[#e0d6b6]/10">
+      <footer className="bg-[#1a3b40] w-full py-12 border-t border-[#e0d6b6]/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-8 gap-6">
           <div className="flex items-center gap-2">
-            <img src="/octosync_icon.png" alt="Octosync" className="h-8 w-8 object-contain" />
-            <span className="italic text-[#f28c5a] text-xl font-bold">Octosync</span>
+            <div className="relative h-14 w-14 flex-shrink-0">
+              <img src="/octo_circuit.png" alt="" className="absolute inset-0 h-full w-full object-contain" style={{ filter: 'url(#exact-orange)' }} />
+              <img src="/octo_body.png" alt="Octosync" className="absolute inset-0 h-full w-full object-contain" style={{ filter: 'url(#exact-cream)' }} />
+            </div>
+            <span className="text-[#e0d6b6] text-xl font-bold">Octosync</span>
           </div>
           <div className="flex gap-8">
             <a className="text-[#e0d6b6]/60 hover:text-[#f28c5a] transition-colors text-sm tracking-wide" href="#services">Services</a>
             <a className="text-[#e0d6b6]/60 hover:text-[#f28c5a] transition-colors text-sm tracking-wide" href="#founders">Founders</a>
             <a className="text-[#e0d6b6]/60 hover:text-[#f28c5a] transition-colors text-sm tracking-wide" href="#contact">Contact</a>
-            <a className="text-[#e0d6b6]/60 hover:text-[#f28c5a] transition-colors text-sm tracking-wide" href="#">Legal</a>
           </div>
           <p className="text-sm tracking-wide text-[#e0d6b6]/60 text-center md:text-right">
-            © 2024 Octosync. Precision Engineering for the Modern Scholar.
+            © 2024 Octosync. Intelligent automation, naturally.
           </p>
         </div>
       </footer>
