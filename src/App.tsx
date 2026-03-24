@@ -1,119 +1,203 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
+import OctoLogo from './components/OctoLogo'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault()
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })
+  }
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+      {/* TopAppBar */}
+      <header className="fixed top-0 w-full z-50 bg-[#1a3b40]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(245,241,228,0.05)]">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-6 h-20">
+          <div className="flex items-center gap-3">
+            <img src="/octoflow_icon.png" alt="Octoflow" className="h-16 w-16 object-contain" />
+            <span className="text-2xl font-bold text-[#e0d6b6]">Octoflow</span>
+          </div>
+          <div className="flex items-center">
+            <button
+              onClick={scrollToContact}
+              className="bg-[#f28c5a] text-[#2d1a10] px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-[#f28c5a]/80 transition-all active:scale-95"
+            >
+              Get a Systems Audit
+            </button>
+          </div>
         </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+      </header>
+
+      <main className="pt-0">
+        {/* Hero Section */}
+        <section className="relative min-h-[600px] flex flex-col justify-center px-6 pt-24 pb-12 overflow-hidden">
+          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+            <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#f28c5a] rounded-full blur-[120px]"></div>
+            <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-[#2a626a] rounded-full blur-[100px]"></div>
+          </div>
+          <div className="max-w-4xl mx-auto relative z-10">
+            <span className="inline-block mb-6 px-4 py-1 border border-[#f28c5a]/20 bg-[#f28c5a]/5 rounded-full text-[#f28c5a] text-xs tracking-[0.2em] uppercase">
+              Enterprise Grade Intelligence
+            </span>
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-[#e0d6b6] leading-[1.1] mb-8">
+              Intelligent automation, <span className="italic text-[#f28c5a]">naturally.</span>
+            </h1>
+            <p className="text-[#e0d6b6]/70 text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
+              Leveraging a pedigree from OpenAI, Microsoft, and Kroger to architect precision-engineered systems that evolve with your business architecture.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button
+                onClick={scrollToContact}
+                className="bg-gradient-to-r from-[#f28c5a] to-[#f28c5a] text-[#2d1a10] px-8 py-4 rounded-lg font-bold text-base shadow-xl shadow-[#f28c5a]/10 hover:shadow-[#f28c5a]/20 transition-all active:scale-95"
+              >
+                Initiate Systems Audit
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="bg-[#1d4147] py-16 px-6" id="services">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+              <div className="max-w-xl">
+                <h2 className="text-4xl font-bold mb-4 text-[#e0d6b6]">Core Architecture</h2>
+                <p className="text-[#e0d6b6]/60">We don't just build scripts; we design intelligent ecosystems that eliminate friction and maximize technical throughput.</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Card 1 */}
+              <div className="p-8 rounded-xl bg-[#20464d] border border-[#4a747a]/10 hover:border-[#f28c5a]/30 transition-all duration-500">
+                <h3 className="text-2xl font-bold mb-4 text-[#e0d6b6]">Business Automations</h3>
+                <p className="text-[#e0d6b6]/70 leading-relaxed">End-to-end workflow synthesis. We identify high-latency manual operations and replace them with self-healing digital pipelines.</p>
+              </div>
+              {/* Card 2 */}
+              <div className="p-8 rounded-xl bg-[#20464d] border border-[#4a747a]/10 hover:border-[#f28c5a]/30 transition-all duration-500">
+                <h3 className="text-2xl font-bold mb-4 text-[#e0d6b6]">AI Strategy Consulting</h3>
+                <p className="text-[#e0d6b6]/70 leading-relaxed">High-level advisory on integrating Large Language Models and custom neural architectures into existing corporate frameworks.</p>
+              </div>
+              {/* Card 3 */}
+              <div className="p-8 rounded-xl bg-[#20464d] border border-[#4a747a]/10 hover:border-[#f28c5a]/30 transition-all duration-500">
+                <h3 className="text-2xl font-bold mb-4 text-[#e0d6b6]">Custom Software</h3>
+                <p className="text-[#e0d6b6]/70 leading-relaxed">Bespoke engineering solutions designed for scale. We build the specialized tooling that off-the-shelf platforms cannot provide.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="py-24 px-6 bg-[#1a3b40]" id="founders">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4 text-[#e0d6b6]">The Minds Behind Octoflow</h2>
+              <p className="text-[#e0d6b6]/60 max-w-2xl mx-auto">Engineering precision met with strategic vision. Our founders bring decades of experience from the forefront of the AI revolution.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+              {/* Founder 1 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative mb-8 w-64 h-80 rounded-2xl overflow-hidden">
+                  <img
+                    alt="Alice Chen"
+                    className="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuClC0GfMPxTiw1xPNHKgXMIx4Y8NMwmlmrohjLbbg9tsziEonenUdplpaz4rHEF4p5E6VhsDh94zo52rqrvOUGzJcaYFii9b-mM300thIlW-Ecr3aqkdeeLhs2AqExvdeWvgjoXr23uvYI0omsLTO1UMJ-Ug_aH586Y_5KmD7jY_uoHiH0ymldGt7fQq8cDO0wrqEIu9bUIj2vvmuZ19_22u3tlaXNn-Uw0EEM46PktWMTyfMOoX0EkTUYkpJR2tsnxGhuzRjNjcysf"
+                  />
+                  <div className="absolute inset-0 border-2 border-[#f28c5a]/20 rounded-2xl pointer-events-none"></div>
+                </div>
+                <h3 className="text-2xl font-bold mb-1 text-[#e0d6b6]">Alice Chen</h3>
+                <p className="text-[#f28c5a] text-sm uppercase tracking-widest mb-4">Co-Founder &amp; Chief Architect</p>
+                <p className="text-[#e0d6b6]/70 leading-relaxed max-w-xs">Former OpenAI lead specializing in high-throughput data architectures and generative systems.</p>
+              </div>
+              {/* Founder 2 */}
+              <div className="flex flex-col items-center text-center">
+                <div className="relative mb-8 w-64 h-80 rounded-2xl overflow-hidden">
+                  <img
+                    alt="David Torres"
+                    className="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHkhqakkn_52KmVdVLYLMWu-yo4xKFZ_6TFS2wu8C4sL2aaUCqM2KN3U1OfNjV34r3UZoPUxVJoSIi-XpyccdNJZA5eh0OBLYcVy7o_BIYy5tXdQVuWdRGPHfvvSsIPQLPqftc4Ru-X8Q-vNYa6n765u5z2HIOfvhVqMSdL2XbXVArcfL0rsHQOklv1H_EDJuUQZGh3QL0EXL4qK2vgFoDdKvK4JlnHObFmMiF7Xz5-nlQ0tWhePB6-SlmbEV41U8ZK_994c8v1Njd"
+                  />
+                  <div className="absolute inset-0 border-2 border-[#f28c5a]/20 rounded-2xl pointer-events-none"></div>
+                </div>
+                <h3 className="text-2xl font-bold mb-1 text-[#e0d6b6]">David Torres</h3>
+                <p className="text-[#f28c5a] text-sm uppercase tracking-widest mb-4">Co-Founder &amp; Strategy Lead</p>
+                <p className="text-[#e0d6b6]/70 leading-relaxed max-w-xs">Ex-Microsoft engineering director with a focus on enterprise-scale automation and supply chain logic.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="py-24 px-6 bg-[#122a2e]" id="contact">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4 text-[#e0d6b6]">Process Discussion and Systems Audit</h2>
+              <p className="text-[#e0d6b6]/60">Ready to optimize your internal throughput? Let's discuss your current systems architecture.</p>
+            </div>
+            <div className="glass-card p-10 rounded-2xl border border-[#4a747a]/10 shadow-2xl">
+              <form action="#" className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="space-y-2">
+                    <label className="text-xs uppercase tracking-widest text-[#a3dce3]">Full Name</label>
+                    <input
+                      className="w-full bg-[#2a545a] border-none rounded-lg p-4 text-[#e0d6b6] placeholder:text-[#e0d6b6]/30 focus:ring-2 focus:ring-[#f28c5a]/50 focus:outline-none transition-all"
+                      placeholder="John Doe"
+                      type="text"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-xs uppercase tracking-widest text-[#a3dce3]">Work Email</label>
+                    <input
+                      className="w-full bg-[#2a545a] border-none rounded-lg p-4 text-[#e0d6b6] placeholder:text-[#e0d6b6]/30 focus:ring-2 focus:ring-[#f28c5a]/50 focus:outline-none transition-all"
+                      placeholder="john@enterprise.com"
+                      type="email"
+                    />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-widest text-[#a3dce3]">Primary Objective</label>
+                  <select className="w-full bg-[#2a545a] border-none rounded-lg p-4 text-[#e0d6b6] focus:ring-2 focus:ring-[#f28c5a]/50 focus:outline-none transition-all">
+                    <option>Workflow Automation</option>
+                    <option>AI Integration Strategy</option>
+                    <option>Custom Software Development</option>
+                    <option>Full Systems Audit</option>
+                  </select>
+                </div>
+                <div className="space-y-2">
+                  <label className="text-xs uppercase tracking-widest text-[#a3dce3]">Project Details</label>
+                  <textarea
+                    className="w-full bg-[#2a545a] border-none rounded-lg p-4 text-[#e0d6b6] placeholder:text-[#e0d6b6]/30 focus:ring-2 focus:ring-[#f28c5a]/50 focus:outline-none transition-all"
+                    placeholder="Briefly describe your current bottlenecks..."
+                    rows={4}
+                  ></textarea>
+                </div>
+                <button
+                  className="w-full bg-[#f28c5a] hover:bg-[#f28c5a]/80 text-[#2d1a10] font-bold py-4 rounded-lg transition-all shadow-lg shadow-[#f28c5a]/20 active:scale-95"
+                  type="submit"
+                >
+                  Let's talk systems.
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-[#122a2e] w-full py-12 border-t border-[#e0d6b6]/10">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-8 gap-6">
+          <div className="flex items-center gap-2">
+            <img src="/octoflow_icon.png" alt="Octoflow" className="h-8 w-8 object-contain" />
+            <span className="italic text-[#f28c5a] text-xl font-bold">Octoflow</span>
+          </div>
+          <div className="flex gap-8">
+            <a className="text-[#e0d6b6]/60 hover:text-[#f28c5a] transition-colors text-sm tracking-wide" href="#services">Services</a>
+            <a className="text-[#e0d6b6]/60 hover:text-[#f28c5a] transition-colors text-sm tracking-wide" href="#founders">Founders</a>
+            <a className="text-[#e0d6b6]/60 hover:text-[#f28c5a] transition-colors text-sm tracking-wide" href="#contact">Contact</a>
+            <a className="text-[#e0d6b6]/60 hover:text-[#f28c5a] transition-colors text-sm tracking-wide" href="#">Legal</a>
+          </div>
+          <p className="text-sm tracking-wide text-[#e0d6b6]/60 text-center md:text-right">
+            © 2024 Octoflow. Precision Engineering for the Modern Scholar.
           </p>
         </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
+      </footer>
     </>
   )
 }
