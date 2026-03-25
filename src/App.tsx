@@ -50,7 +50,7 @@ function App() {
               onClick={scrollToContact}
               className="bg-[#f28c5a] text-[#2d1a10] px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-[#f28c5a]/80 transition-all active:scale-95"
             >
-              Get a Systems Audit
+              Let's Talk
             </button>
           </div>
         </div>
