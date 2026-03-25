@@ -71,7 +71,7 @@ function App() {
               Intelligent automation, <span className="italic text-[#f28c5a]">naturally.</span>
             </h1>
             <p className="text-[#e0d6b6]/70 text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
-              Leveraging a pedigree from OpenAI, Microsoft, and Kroger to architect precision-engineered systems that evolve with your business architecture.
+              Rooted in experience at OpenAI, Microsoft, and Kroger. We build the systems that make your business run smarter.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
