@@ -163,28 +163,32 @@ function App() {
               <p className="text-[#e0d6b6]/60">Ready to optimize your internal throughput? Let's discuss your current systems architecture.</p>
             </div>
             <div className="glass-card p-10 rounded-2xl border border-[#4a747a]/10 shadow-2xl">
-              <form action="#" className="space-y-6">
+              <form action="https://formspree.io/f/xreogany" method="POST" className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs uppercase tracking-widest text-[#a3dce3]">Full Name</label>
                     <input
+                      name="name"
                       className="w-full bg-[#2a545a] border-none rounded-lg p-4 text-[#e0d6b6] placeholder:text-[#e0d6b6]/30 focus:ring-2 focus:ring-[#f28c5a]/50 focus:outline-none transition-all"
                       placeholder="John Doe"
                       type="text"
+                      required
                     />
                   </div>
                   <div className="space-y-2">
                     <label className="text-xs uppercase tracking-widest text-[#a3dce3]">Work Email</label>
                     <input
+                      name="email"
                       className="w-full bg-[#2a545a] border-none rounded-lg p-4 text-[#e0d6b6] placeholder:text-[#e0d6b6]/30 focus:ring-2 focus:ring-[#f28c5a]/50 focus:outline-none transition-all"
                       placeholder="john@enterprise.com"
                       type="email"
+                      required
                     />
                   </div>
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs uppercase tracking-widest text-[#a3dce3]">Primary Objective</label>
-                  <select className="w-full bg-[#2a545a] border-none rounded-lg p-4 text-[#e0d6b6] focus:ring-2 focus:ring-[#f28c5a]/50 focus:outline-none transition-all">
+                  <select name="objective" className="w-full bg-[#2a545a] border-none rounded-lg p-4 text-[#e0d6b6] focus:ring-2 focus:ring-[#f28c5a]/50 focus:outline-none transition-all">
                     <option>Workflow Automation</option>
                     <option>AI Integration Strategy</option>
                     <option>Custom Software Development</option>
@@ -194,6 +198,7 @@ function App() {
                 <div className="space-y-2">
                   <label className="text-xs uppercase tracking-widest text-[#a3dce3]">Project Details</label>
                   <textarea
+                    name="details"
                     className="w-full bg-[#2a545a] border-none rounded-lg p-4 text-[#e0d6b6] placeholder:text-[#e0d6b6]/30 focus:ring-2 focus:ring-[#f28c5a]/50 focus:outline-none transition-all"
                     placeholder="Briefly describe your current bottlenecks..."
                     rows={4}
