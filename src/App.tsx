@@ -71,7 +71,7 @@ function App() {
               Intelligent automation, <span className="italic text-[#f28c5a]">naturally.</span>
             </h1>
             <p className="text-[#e0d6b6]/70 text-lg md:text-xl max-w-2xl leading-relaxed mb-10">
-              Rooted in experience at OpenAI, Microsoft, and Kroger. We build the systems that make your business run smarter.
+              Rooted in experience at Nike, Microsoft, and Kroger. We build the systems that make your business run smarter.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button
@@ -134,7 +134,7 @@ function App() {
                 <h3 className="text-2xl font-bold mb-1 text-[#e0d6b6]">Sean Pichardo</h3>
                 <p className="text-[#f28c5a] text-sm uppercase tracking-widest mb-4">Co-Founder &amp; Chief Architect</p>
                 <p className="text-[#e0d6b6]/70 leading-relaxed max-w-xs">Lead Architect specializing in high-throughput and enterprise generative systems,
-                  having engineered critical solutions for OpenAI and scaled enterprise platforms for global brands like Nike and Kroger.</p>
+                  having engineered critical solutions for one of the largest AI companies in the world, and scaled enterprise platforms for global brands like Nike and Kroger.</p>
               </div>
               {/* Founder 2 */}
               <div className="flex flex-col items-center text-center">
