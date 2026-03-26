@@ -147,7 +147,8 @@ function App() {
                 </div>
                 <h3 className="text-2xl font-bold mb-1 text-[#e0d6b6]">LeSean Johnson</h3>
                 <p className="text-[#f28c5a] text-sm uppercase tracking-widest mb-4">Co-Founder &amp; Strategy Lead</p>
-                <p className="text-[#e0d6b6]/70 leading-relaxed max-w-xs">Senior engineer with experience in Microsoft environments, designing scalable systems and real-world automation.</p>
+                <p className="text-[#e0d6b6]/70 leading-relaxed max-w-xs">Combines a foundational career at Microsoft with expertise in sophisticated frontend architecture.
+                 Bridges the gap between technical rigor and strategic stakeholder engagement to drive enterprise-grade digital transformations.</p>
               </div>
             </div>
           </div>
