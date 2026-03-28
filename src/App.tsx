@@ -61,9 +61,9 @@ function App() {
       <main className="pt-0">
         {/* Hero Section */}
         <section className="relative min-h-screen flex flex-col items-center justify-center pt-24 pb-12 overflow-hidden">
-          <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
-            <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#f28c5a] rounded-full blur-[120px]"></div>
-            <div className="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-[#2a626a] rounded-full blur-[100px]"></div>
+          <div className="absolute inset-0 z-0">
+            <img src="/hero-bg.png" alt="" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-[#1a3b40]/80"></div>
           </div>
           <div className="grid-container relative z-10 items-center">
             <div className="col-span-12 md:col-span-8 md:col-start-3">
@@ -73,8 +73,8 @@ function App() {
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-[#e0d6b6] leading-[1.1] mb-8">
                 Elevate your business through <span className="italic text-[#f28c5a]">smarter technology.</span>
               </h1>
-              <p className="text-[#e0d6b6]/70 text-lg md:text-xl leading-relaxed mb-10 max-w-2xl">
-                From establishing digital basics for family-owned shops to building advanced AI workflows for enterprises, we unlock the next level of growth for your business.
+              <p className="text-[#e0d6b6]/70 text-lg md:text-xl leading-relaxed mb-10 max-w-[38rem]">
+              Whether you’re digitizing your first storefront or automating complex enterprise workflows, we partner with you to turn technical debt into a competitive advantage.
               </p>
               <div className="mt-12">
                 <p className="text-[#e0d6b6]/40 text-xs tracking-[0.15em] uppercase font-medium mb-6">
