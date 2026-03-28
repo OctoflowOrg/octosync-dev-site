@@ -70,6 +70,14 @@
 }
 
 @layer components {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
   .glass-card {
     background: rgba(32, 70, 77, 0.4);
     backdrop-filter: blur(12px);
